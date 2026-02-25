@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>첫 컨텐츠 배포</title>
+  <meta property="og:title" content="첫 컨텐츠 배포" />
+  <meta property="og:image" content="https://ik.imagekit.io/estherpack/cms/contents/9c922ba6-3a9b-429a-8438-5e88148c8f7f/img_life_01_detail01_qjSk2v5fO.jpg?tr=f-auto,q-auto" />
+  <style>
+    body { margin: 0; padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 16px; }
+    img { max-width: 100%; height: auto; display: block; }
+    h1, h2, h3 { margin-top: 1.5em; margin-bottom: 0.5em; }
+    p { margin: 0.8em 0; }
+    a { color: #0066cc; }
+  </style>
+  
+  <script>
+    // Appsflyer Web SDK (stub)
+    window.AF_TRACKING = {
+      contentId: "9c922ba6-3a9b-429a-8438-5e88148c8f7f",
+      contentSlug: "welcom",
+      contentTitle: "첫 컨텐츠 배포"
+    };
+    console.log("[Appsflyer] page_view", window.AF_TRACKING);
+  </script>
+</head>
+<body>
+  <article>
+    <h1 data-block-id="b0-1771923253278" data-block-type="TEXT">환영합니다?!</h1>
+    <div data-block-id="b1-1771923616484" data-block-type="IMAGE"><img src="https://ik.imagekit.io/estherpack/cms/contents/9c922ba6-3a9b-429a-8438-5e88148c8f7f/img_life_01_detail01_qjSk2v5fO.jpg?tr=f-auto,q-auto" alt="" style="max-width: 100%; height: auto; display: block;" /></div>
+    <div data-block-id="b2-1771923774061" data-block-type="IMAGE"><img src="https://ik.imagekit.io/estherpack/cms/contents/9c922ba6-3a9b-429a-8438-5e88148c8f7f/img_life_01_detail02_4CjtA21hA.jpg?tr=f-auto,q-auto" alt="" style="max-width: 100%; height: auto; display: block;" /></div>
+  </article>
+
+  <script>
+    document.querySelectorAll('a[href]').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        var blockEl = e.target.closest('[data-block-id]');
+        var eventData = {
+          content_id: "9c922ba6-3a9b-429a-8438-5e88148c8f7f",
+          content_slug: "welcom",
+          clicked_url: el.href,
+          block_id: blockEl ? blockEl.dataset.blockId : null,
+          block_type: blockEl ? blockEl.dataset.blockType : null
+        };
+        console.log("[Appsflyer] link_click", eventData);
+      });
+    });
+  </script>
+</body>
+</html>
